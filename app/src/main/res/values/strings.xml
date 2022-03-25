@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pokeapi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="habilidades">Habilidades</string>
+    <string name="linea_evolutiva">Linea Evolutiva</string>
+</resources>

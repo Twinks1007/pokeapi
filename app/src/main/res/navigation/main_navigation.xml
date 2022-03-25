@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.twinkslab.pokeapi.home.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailPokemonFragment5"
+            app:destination="@id/detailPokemonFragment" >
+
+            <argument
+                android:name="pokemon"
+                app:argType="com.twinkslab.pokeapi.service.model.ApiModelPokemon" />
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailPokemonFragment"
+        android:name="com.twinkslab.pokeapi.details.ui.DetailPokemonFragment"
+        android:label="fragment_detail_pokemon"
+        tools:layout="@layout/fragment_detail_pokemon" >
+
+        <argument
+            android:name="pokemon"
+            app:argType="com.twinkslab.pokeapi.service.model.ApiModelPokemon" />
+        <action
+            android:id="@+id/action_detailPokemonFragment_to_evolutionPokemonFragment"
+            app:destination="@id/evolutionPokemonFragment"/>
+        <action
+            android:id="@+id/action_detailPokemonFragment_to_skillsPokemonFragment"
+            app:destination="@id/skillsPokemonFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/evolutionPokemonFragment"
+        android:name="com.twinkslab.pokeapi.evolution.ui.EvolutionPokemonFragment"
+        android:label="fragment_evolution_pokemon"
+        tools:layout="@layout/fragment_evolution_pokemon" >
+        <argument
+            android:name="evolution"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/skillsPokemonFragment"
+        android:name="com.twinkslab.pokeapi.skills.ui.SkillsPokemonFragment"
+        android:label="fragment_skills_pokemon"
+        tools:layout="@layout/fragment_skills_pokemon" >
+        <argument
+            android:name="pokemon"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>
